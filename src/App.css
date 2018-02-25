@@ -1,0 +1,7 @@
+.navbar li{
+  text-align: right;
+  list-style: none;
+  float: right;
+  padding-right: 1em;
+}
+
