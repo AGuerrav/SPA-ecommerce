@@ -16,11 +16,11 @@ export default class CatalogueSection extends Component {
     console.log(this.props);
     return(
     	<div className = 'cat'>
-          { Category && Category.map((Category, key) => <div key = { key }> 
-                <img src = { Category.img } />
-                <h3>{ Category.name }</h3>
-                <p>{ Category.info }</p>
-                <p>{ Category.precio }</p>
+          { Category && Category.map((Category, key) => <div className = 'cont-cat' key = { key }> 
+                <img className = 'img-data' src = { Category.img } />
+                <h3 className= 'title-data'>{ Category.name }</h3>
+                <p className = 'text-center'>{ Category.info }</p>
+                <p className = 'text-center'>{ Category.precio }</p>
                 </div>)}
         </div>
     	

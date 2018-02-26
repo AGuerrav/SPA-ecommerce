@@ -119,3 +119,6 @@ img {
 		user-select: none;
 		transition: background .125s ease, transform .125s ease;
 }
+.cat .cont-cat{
+	display: inline-block;
+}
