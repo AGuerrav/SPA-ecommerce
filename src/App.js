@@ -1,13 +1,14 @@
+//Dependence
 import React, { Component } from 'react';
-import MenuSection from './sections/menu.js'
-
-import CatalogueSection from './sections/catalogue.js'
-
-import {SearchForm} from './sections/SearchForm'
-import {ItemList} from './sections/itemList'
-
-
+import MenuSection from './sections/menu';
+//Components
+import CatalogueSection from './sections/catalogue';
+import {SearchForm} from './sections/SearchForm';
+import {ItemList} from './sections/itemList';
 import './App.css';
+
+// data
+import Category from './assets/js/data'
 
 class App extends Component {
   state = { results : [] }
@@ -20,13 +21,13 @@ class App extends Component {
     return (
       <div className="App">
         <MenuSection />
-        <CatalogueSection />
-        <div className="SearchForm-wrapper" >
+        
+        <div className='SearchForm-wrapper'>
           <SearchForm onResults={this._handleResults} />
         </div>
-        {this.state.results.length === 0
-          ? <p> Sin resultados</p>
-          : <ItemList items={this.state.results} />
+          {this.state.results.length === 0
+          ? <CatalogueSection Category = { Category } />
+          : <ItemList items = {this.state.results} />
         }
       </div>
     );

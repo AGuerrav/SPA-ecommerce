@@ -22,5 +22,5 @@ export class Item extends Component {
       </div>
     </div>
     )
- }
- }
+  }
+}
