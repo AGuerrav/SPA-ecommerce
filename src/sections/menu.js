@@ -1,20 +1,6 @@
 import React, { Component } from 'react'
-//import { Navbar } from 'react-bootstrap';
-//practica react.
-/*class LoginButton extends Component {
-  render(){
-    return <button>Iniciar Sesión</button>
-  }
-}
 
-class LogoutButton extends Component {
-  render() {
-    return <p>Bienvenido, usuario!</p>
-    <button>Cerrar</button>
-  }
 
-}
-*/
 export default class MenuSection extends Component {
   render(){
     return(
@@ -27,6 +13,7 @@ export default class MenuSection extends Component {
         <span className="icon-bar"></span>
         <span className="icon-bar"></span>
       </button>
+
       <a className="navbar-brand" href="#">Lab-Express</a>
     </div>
     <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

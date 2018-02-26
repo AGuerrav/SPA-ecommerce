@@ -1,18 +1,37 @@
 import React, { Component } from 'react';
 import MenuSection from './sections/menu.js'
+
 import CatalogueSection from './sections/catalogue.js'
+
+import {SearchForm} from './sections/SearchForm'
+import {ItemList} from './sections/itemList'
+
+
 import './App.css';
 
 class App extends Component {
-	render() {
-		return(
-			<div className = 'App'>
-				<MenuSection />
-				<CatalogueSection />
+  state = { results : [] }
 
-			</div>
-			)
-	}
+  _handleResults = (results) => {
+    this.setState({ results })
+}
+
+  render() {
+    return (
+      <div className="App">
+        <MenuSection />
+        <CatalogueSection />
+        <div className="SearchForm-wrapper" >
+          <SearchForm onResults={this._handleResults} />
+        </div>
+        {this.state.results.length === 0
+          ? <p> Sin resultados</p>
+          : <ItemList items={this.state.results} />
+        }
+      </div>
+    );
+  }
+
 }
 
 export default App;
