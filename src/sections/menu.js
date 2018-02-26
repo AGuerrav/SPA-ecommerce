@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 
-
 export default class MenuSection extends Component {
   render(){
     return(
@@ -13,7 +12,6 @@ export default class MenuSection extends Component {
               <span className="icon-bar"></span>
               <span className="icon-bar"></span>
             </button>
-
             <a className="navbar-brand" href="#">Lab-Express</a>
           </div>
           <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -33,12 +31,6 @@ export default class MenuSection extends Component {
                 </ul>
               </li>
             </ul>
-            <form className="navbar-form navbar-left">
-              <div className="form-group">
-                <input type="text" className="form-control" placeholder="Search" />
-              </div>
-              <button type="button" className="btn btn-default">Go!</button>
-            </form>
             <ul className="nav navbar-nav navbar-right">
               <li><a href="#">Link</a></li>
               <li className="dropdown">
@@ -55,6 +47,7 @@ export default class MenuSection extends Component {
           </div>
         </div>
       </nav>
+
     )
   }
 }

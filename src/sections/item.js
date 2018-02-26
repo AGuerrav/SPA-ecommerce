@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+// import CardProduct from './product'
 
 export class Item extends Component {
  static propTypes ={
@@ -10,17 +11,22 @@ export class Item extends Component {
  }
 
  render(){
+
   const {thumbnail, title, condition, price} = this.props
 
   return (
+    // <CardProduct/>
     <div className="thumbnail">
       <img className="img-responsive" src={thumbnail} alt={title} />
       <div className="caption">
-        <h2>{title}</h2>
-        <h3>{condition}</h3>
+        <h4>{title}</h4>
+        <h5>Estado: {condition}</h5>
         <h3>${price}</h3>
       </div>
+      <div className="Buy"><div className="label">+ Add to Cart</div></div>
     </div>
     )
+
   }
 }
+
