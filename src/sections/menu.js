@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 
-
 export default class MenuSection extends Component {
   render(){
     return(
@@ -33,12 +32,8 @@ export default class MenuSection extends Component {
           </ul>
         </li>
       </ul>
-      <form className="navbar-form navbar-left">
-        <div className="form-group">
-          <input type="text" className="form-control" placeholder="Search" />
-        </div>
-        <button type="button" className="btn btn-default">Go!</button>
-      </form>
+      
+
       <ul className="nav navbar-nav navbar-right">
         <li><a href="#">Link</a></li>
         <li className="dropdown">
