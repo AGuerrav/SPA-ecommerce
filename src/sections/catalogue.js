@@ -11,12 +11,12 @@ export default class CatalogueSection extends Component {
 	}
   render(){
     // obtener las categorias
+    // primero pregunto si category esta inicializado, recorro category para obtener los datos
     const { title, Category } = this.props;
     console.log(this.props);
     return(
     	<div className = 'cat'>
-          // primero pregunto si category esta inicializado, recorro category para obtener los datos
-          { Category && Category.map((Category, key) => <div className = 'cont-cat' key = { key }> 
+        { Category && Category.map((Category, key) => <div className = 'cont-cat' key = { key }> 
                 <img className = 'img-data' src = { Category.img } />
                 <h3 className= 'title-data'>{ Category.name }</h3>
                 <p className = 'text-center'>{ Category.info }</p>
