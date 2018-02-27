@@ -23,13 +23,14 @@ export class Item extends Component {
         <h5>Estado: {condition}</h5>
         <h3>${price}</h3>
       </div>
-      <div className="Buy"><div className="label">+ Add to Cart</div></div>
-      <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
-        <input type="hidden" name="cmd" value="_s-xclick"></input>
-        <input type="hidden" name="hosted_button_id" value="5A34WFDB5F8G4"></input>
-        <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"></input>
-        <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1"/>
-      </form>
+      <div className="Buy"><div className="label">+ Agregar al carro</div></div>
+     <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick"></input>
+<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+"></input>
+<input type="image" src="https://www.sandbox.paypal.com/es_XC/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal, la forma más segura y rápida de pagar en línea."></input>
+<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1"/>
+</form>
 
 
     </div>
