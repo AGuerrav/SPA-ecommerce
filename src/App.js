@@ -8,6 +8,7 @@ import {ItemList} from './sections/itemList';
 import './App.css';
 
 // data
+// Importar el json
 import Category from './assets/js/data'
 
 class App extends Component {
@@ -25,9 +26,11 @@ class App extends Component {
         <div className='SearchForm-wrapper'>
           <SearchForm onResults={this._handleResults} />
         </div>
-          {this.state.results.length === 0  //si el array de los resultado es 0 ->true
-          ? <CatalogueSection Category = { Category } /> //solo se muestra la data base creada por nosotras
-          : <ItemList items = {this.state.results} /> // si existen resultados entonces se muestran los elementos entregados por la API
+          {this.state.results.length === 0 //si el array de los resultado es 0 ->true
+            //Items que le pasaremos a CatalogueSection
+          ? <CatalogueSection Category = { Category } /> 
+          : <ItemList items = {this.state.results} /> 
+
         }
       </div>
     );
