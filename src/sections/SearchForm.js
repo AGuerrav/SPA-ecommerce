@@ -25,7 +25,7 @@ export class SearchForm extends Component {
 
       <form onSubmit = {this._handleSubmit}>
         <div className="input-append">
-          <input onChange={this._handleChange} type="text" className="span2" placeholder="Que andas buscando?" />
+          <input onChange={this._handleChange} type="text" className="span2"  size="120"placeholder="¿Qué andas buscando?" />
           <button className="btn">Search</button>
         </div>
       </form>
