@@ -11,9 +11,9 @@ import './App.css';
 import Category from './assets/js/data'
 
 class App extends Component {
-  state = { results : [] }
+  state = { results : [] } // Guardamos los resultados del llamado a la API
 
-  _handleResults = (results) => {
+  _handleResults = (results) => { //monitorea los cambios en los resultados
     this.setState({ results })
 }
 
@@ -25,9 +25,9 @@ class App extends Component {
         <div className='SearchForm-wrapper'>
           <SearchForm onResults={this._handleResults} />
         </div>
-          {this.state.results.length === 0
-          ? <CatalogueSection Category = { Category } />
-          : <ItemList items = {this.state.results} />
+          {this.state.results.length === 0  //si el array de los resultado es 0 ->true
+          ? <CatalogueSection Category = { Category } /> //solo se muestra la data base creada por nosotras
+          : <ItemList items = {this.state.results} /> // si existen resultados entonces se muestran los elementos entregados por la API
         }
       </div>
     );
