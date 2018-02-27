@@ -8,6 +8,7 @@ import {ItemList} from './sections/itemList';
 import './App.css';
 
 // data
+// Importar el json
 import Category from './assets/js/data'
 
 class App extends Component {
@@ -26,6 +27,7 @@ class App extends Component {
           <SearchForm onResults={this._handleResults} />
         </div>
           {this.state.results.length === 0
+            //Items que le pasaremos a CatalogueSection
           ? <CatalogueSection Category = { Category } />
           : <ItemList items = {this.state.results} />
         }
